@@ -18,7 +18,7 @@ namespace PWUrlRedirect
             {
                 string urlReformat = URL;
 
-                if ( !URL.Contains("http://") && !URL.Contains("https://") )
+				if (!URL.StartsWith("http://") && !URL.StartsWith("https://"))
                 {
                     urlReformat = String.Format("~{0}", URL);
                 }
